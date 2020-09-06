@@ -1,8 +1,8 @@
 <template>
   <div :class="`game-lights ${state}`">
-          <input type="radio" name='pick' id='easyy' value="easy" v-model="picked">
+      <input type="radio" name='pick' id='easyy' value="easy" v-model="picked" checked>
         <label for="easyy">Easy</label>
-			<input type="radio" name='pick' id='normall' value="normal" v-model="picked">
+			<input type="radio" name="pick" id="normall" value="normal" v-model="picked">
         <label for="normall">Normal</label>
 			<input type="radio" name='pick' id='hardd' value="hard" v-model="picked">
         <label for="hardd">Hard</label><br>
@@ -38,6 +38,7 @@ export default {
     return {
       started: false,
       picked: '',
+      checked: true,
       }
     },
   computed: {
